@@ -12,6 +12,7 @@
 		A1209E2B216B94ED00A80B83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1209E2A216B94ED00A80B83 /* Assets.xcassets */; };
 		A1209E2E216B94ED00A80B83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1209E2C216B94ED00A80B83 /* LaunchScreen.storyboard */; };
 		A14C0853216D0BB2001A7990 /* GDGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C0852216D0BB2001A7990 /* GDGradient.swift */; };
+		A14C0855216D14AC001A7990 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C0854216D14AC001A7990 /* extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		A1209E2D216B94ED00A80B83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1209E2F216B94ED00A80B83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A14C0852216D0BB2001A7990 /* GDGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDGradient.swift; sourceTree = "<group>"; };
+		A14C0854216D14AC001A7990 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		A1209E22216B94EC00A80B83 /* IOSDEV */ = {
 			isa = PBXGroup;
 			children = (
+				A14C0856216D14C0001A7990 /* extension */,
 				A1209E23216B94ED00A80B83 /* AppDelegate.swift */,
 				A1209E25216B94ED00A80B83 /* WelcomeController.swift */,
 				A1209E2A216B94ED00A80B83 /* Assets.xcassets */,
@@ -62,6 +65,14 @@
 				A14C0852216D0BB2001A7990 /* GDGradient.swift */,
 			);
 			path = IOSDEV;
+			sourceTree = "<group>";
+		};
+		A14C0856216D14C0001A7990 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				A14C0854216D14AC001A7990 /* extension.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 				A1209E26216B94ED00A80B83 /* WelcomeController.swift in Sources */,
 				A14C0853216D0BB2001A7990 /* GDGradient.swift in Sources */,
 				A1209E24216B94ED00A80B83 /* AppDelegate.swift in Sources */,
+				A14C0855216D14AC001A7990 /* extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
