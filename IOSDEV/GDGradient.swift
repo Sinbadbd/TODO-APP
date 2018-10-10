@@ -22,6 +22,11 @@ class GDGradient:UIView {
         UIColor.init(rgb: 0x3A7BD5).cgColor
     ]
     
+    var staticColor:[CGColor] = [
+        UIColor.blueZero.cgColor,
+        UIColor.blueOne.cgColor
+    ]
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -29,7 +34,7 @@ class GDGradient:UIView {
         if let layer = self.layer as? CAGradientLayer {
             
             self.translatesAutoresizingMaskIntoConstraints = false
-            layer.colors = self.hexcolors
+            layer.colors = self.staticColor
             layer.locations = [0.0,1.2]
         }
         

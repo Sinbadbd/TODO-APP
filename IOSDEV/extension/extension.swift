@@ -21,4 +21,8 @@ extension UIColor {
             blue: rgb & 0xFF
         )
     }
+    
+    // static color formate
+    static var blueZero : UIColor {return UIColor.init(rgb: 0x64E4FF)}
+    static var blueOne : UIColor {return UIColor.init(rgb: 0x3A7BD5)}
 }
