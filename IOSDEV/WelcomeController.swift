@@ -38,7 +38,6 @@ class WelcomeController: UIViewController {
         
         
         
-        
     }
 
     
@@ -50,7 +49,7 @@ class WelcomeController: UIViewController {
     }()
     
     
-    let titleLabel = UILabel()
+    let titleLabel = GDLabel(title: "GET IT DONE", size: 24, textAlign: .center)
 
 }
 
