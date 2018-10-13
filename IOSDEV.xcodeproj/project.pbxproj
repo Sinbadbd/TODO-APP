@@ -25,6 +25,8 @@
 		A1209E2F216B94ED00A80B83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A14C0852216D0BB2001A7990 /* GDGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GDGradient.swift; path = ../GDGradient.swift; sourceTree = "<group>"; };
 		A14C0854216D14AC001A7990 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		A14D9A7A2172769900B39DB4 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		A14D9A7B2172783900B39DB4 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		A14DFE6A216FAC5E006E752F /* GDLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GDLabel.swift; path = IOSDEV/GDLabel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -58,6 +60,7 @@
 		A1209E22216B94EC00A80B83 /* IOSDEV */ = {
 			isa = PBXGroup;
 			children = (
+				A14D9A792172750F00B39DB4 /* fonts */,
 				A14DFE69216FABBD006E752F /* Controls */,
 				A14C0856216D14C0001A7990 /* extension */,
 				A1209E23216B94ED00A80B83 /* AppDelegate.swift */,
@@ -76,6 +79,16 @@
 			);
 			path = extension;
 			sourceTree = "<group>";
+		};
+		A14D9A792172750F00B39DB4 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A14D9A7B2172783900B39DB4 /* OpenSans-SemiBold.ttf */,
+				A14D9A7A2172769900B39DB4 /* OpenSans-Light.ttf */,
+			);
+			name = fonts;
+			path = IOSDEV/fonts;
+			sourceTree = SOURCE_ROOT;
 		};
 		A14DFE69216FABBD006E752F /* Controls */ = {
 			isa = PBXGroup;
