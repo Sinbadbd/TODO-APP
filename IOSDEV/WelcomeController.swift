@@ -33,15 +33,18 @@ class WelcomeController: UIViewController {
     
     let startButton = GDButton(title: "START WINDOW")
     
-    
     @objc func nextStartButton(){
         UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
             self.startButton.transform = CGAffineTransform(scaleX: 0.9, y:0.9)
         }) { (_) in
             UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
                 self.startButton.transform = CGAffineTransform(scaleX: 1, y:1)
-            })
+            }) { (_) in
+                self.present(ListController(), animated: true, completion: nil)
+            }
         }
+        
+        
     }
     
     override func viewDidLoad() {
@@ -49,9 +52,6 @@ class WelcomeController: UIViewController {
         
         //next page with animation
         startButton.addTarget(self, action: #selector(self.nextStartButton), for: .allTouchEvents)
-        
-        
-        
         
         view.backgroundColor = .white
         

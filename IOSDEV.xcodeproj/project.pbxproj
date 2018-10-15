@@ -14,6 +14,7 @@
 		A14C0853216D0BB2001A7990 /* GDGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C0852216D0BB2001A7990 /* GDGradient.swift */; };
 		A14C0855216D14AC001A7990 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C0854216D14AC001A7990 /* extension.swift */; };
 		A14D68602174FBF80074CB60 /* GDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14D685F2174FBF80074CB60 /* GDButton.swift */; };
+		A14D6864217509150074CB60 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14D6863217509150074CB60 /* ListController.swift */; };
 		A14DFE6B216FAC5E006E752F /* GDLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14DFE6A216FAC5E006E752F /* GDLabel.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		A14C0852216D0BB2001A7990 /* GDGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GDGradient.swift; path = ../GDGradient.swift; sourceTree = "<group>"; };
 		A14C0854216D14AC001A7990 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		A14D685F2174FBF80074CB60 /* GDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GDButton.swift; path = IOSDEV/fonts/GDButton.swift; sourceTree = SOURCE_ROOT; };
+		A14D6863217509150074CB60 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		A14D9A7A2172769900B39DB4 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		A14D9A7B2172783900B39DB4 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		A14DFE6A216FAC5E006E752F /* GDLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GDLabel.swift; path = IOSDEV/GDLabel.swift; sourceTree = SOURCE_ROOT; };
@@ -67,6 +69,7 @@
 				A14C0856216D14C0001A7990 /* extension */,
 				A1209E23216B94ED00A80B83 /* AppDelegate.swift */,
 				A1209E25216B94ED00A80B83 /* WelcomeController.swift */,
+				A14D6863217509150074CB60 /* ListController.swift */,
 				A1209E2A216B94ED00A80B83 /* Assets.xcassets */,
 				A1209E2C216B94ED00A80B83 /* LaunchScreen.storyboard */,
 				A1209E2F216B94ED00A80B83 /* Info.plist */,
@@ -179,6 +182,7 @@
 				A14C0855216D14AC001A7990 /* extension.swift in Sources */,
 				A14D68602174FBF80074CB60 /* GDButton.swift in Sources */,
 				A14DFE6B216FAC5E006E752F /* GDLabel.swift in Sources */,
+				A14D6864217509150074CB60 /* ListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
