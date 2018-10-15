@@ -11,9 +11,47 @@ import UIKit
 class WelcomeController: UIViewController {
     
     
+    // UI view
+    let bg:UIView = {
+        let view = GDGradient()
+        view.layer.cornerRadius = 6
+        return view
+    }()
+    
+    
+    let titleLabel = GDLabel(title: "GET IT DONE", size: 24, textAlign: .center)
+    let infoLabel:UILabel = {
+        let label = GDLabel(title: "WELCOME. GET IT DONE IS A TO DO \nLIST.REALLY DOPE TO-DO LIST", size: 14, textAlign: .center)
+        label.numberOfLines = 2
+        return label
+    }()
+    
+    let copyrightLabel:UILabel = {
+        let copyright = GDLabel(title: "© 2018 Copyright", color: .grayOne, size: 12, textAlign: .center)
+        return copyright
+    }()
+    
+    let startButton = GDButton(title: "START WINDOW")
+    
+    
+    @objc func nextStartButton(){
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+            self.startButton.transform = CGAffineTransform(scaleX: 0.9, y:0.9)
+        }) { (_) in
+            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+                self.startButton.transform = CGAffineTransform(scaleX: 1, y:1)
+            })
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //next page with animation
+        startButton.addTarget(self, action: #selector(self.nextStartButton), for: .allTouchEvents)
+        
+        
+        
         
         view.backgroundColor = .white
         
@@ -41,7 +79,7 @@ class WelcomeController: UIViewController {
         
         //copy right text
         view.addSubview(copyrightLabel)
-        copyrightLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        copyrightLabel.widthAnchor.constraint(equalToConstant: 200).isActive = true
         copyrightLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
         copyrightLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         copyrightLabel.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: -30).isActive = true
@@ -56,33 +94,5 @@ class WelcomeController: UIViewController {
     }
 
     
-    // UI view
-    let bg:UIView = {
-        let view = GDGradient()
-        view.layer.cornerRadius = 6
-        return view
-    }()
-    
-    
-    let titleLabel = GDLabel(title: "GET IT DONE", size: 24, textAlign: .center)
-    let infoLabel:UILabel = {
-        let label = GDLabel(title: "WELCOME. GET IT DONE IS A TO DO \nLIST.REALLY DOPE TO-DO LIST", size: 14, textAlign: .center)
-        label.numberOfLines = 2
-        return label
-    }()
-    
-    let copyrightLabel:UILabel = {
-        let copyright = GDLabel(title: "© Copyright", color: .grayZero, size: 12, textAlign: .center)
-        return copyright
-    }()
-    
-    let startButton:UIButton = {
-       let button = UIButton()
-        button.backgroundColor = .white
-        button.setTitle("START WINNING", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-
 }
 
