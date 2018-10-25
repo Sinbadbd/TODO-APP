@@ -16,6 +16,7 @@
 		A14D68602174FBF80074CB60 /* GDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14D685F2174FBF80074CB60 /* GDButton.swift */; };
 		A14D6864217509150074CB60 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14D6863217509150074CB60 /* ListController.swift */; };
 		A14DFE6B216FAC5E006E752F /* GDLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14DFE6A216FAC5E006E752F /* GDLabel.swift */; };
+		A189C2DF21823B4B00621D79 /* GDHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189C2DE21823B4B00621D79 /* GDHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		A14D9A7A2172769900B39DB4 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		A14D9A7B2172783900B39DB4 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		A14DFE6A216FAC5E006E752F /* GDLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GDLabel.swift; path = IOSDEV/GDLabel.swift; sourceTree = SOURCE_ROOT; };
+		A189C2DE21823B4B00621D79 /* GDHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDHeaderView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				A14C0852216D0BB2001A7990 /* GDGradient.swift */,
 				A14DFE6A216FAC5E006E752F /* GDLabel.swift */,
 				A14D685F2174FBF80074CB60 /* GDButton.swift */,
+				A189C2DE21823B4B00621D79 /* GDHeaderView.swift */,
 			);
 			name = Controls;
 			path = "New Group";
@@ -180,6 +183,7 @@
 				A14C0853216D0BB2001A7990 /* GDGradient.swift in Sources */,
 				A1209E24216B94ED00A80B83 /* AppDelegate.swift in Sources */,
 				A14C0855216D14AC001A7990 /* extension.swift in Sources */,
+				A189C2DF21823B4B00621D79 /* GDHeaderView.swift in Sources */,
 				A14D68602174FBF80074CB60 /* GDButton.swift in Sources */,
 				A14DFE6B216FAC5E006E752F /* GDLabel.swift in Sources */,
 				A14D6864217509150074CB60 /* ListController.swift in Sources */,
