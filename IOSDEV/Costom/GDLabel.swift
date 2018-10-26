@@ -17,7 +17,7 @@ class GDLabel: UILabel {
         }
         self.text = title
         self.textColor = color
-        self.font = UIFont.init(name: "OpenSans-Regular.ttf" , size: size)
+        self.font = UIFont(name: "OpenSans-Regular.ttf" , size: size)
         self.textAlignment = textAlign
     }
     

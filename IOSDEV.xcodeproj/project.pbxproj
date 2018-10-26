@@ -26,14 +26,14 @@
 		A1209E2A216B94ED00A80B83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1209E2D216B94ED00A80B83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1209E2F216B94ED00A80B83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A14C0852216D0BB2001A7990 /* GDGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GDGradient.swift; path = ../GDGradient.swift; sourceTree = "<group>"; };
+		A14C0852216D0BB2001A7990 /* GDGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDGradient.swift; sourceTree = "<group>"; };
 		A14C0854216D14AC001A7990 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
-		A14D685F2174FBF80074CB60 /* GDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GDButton.swift; path = IOSDEV/fonts/GDButton.swift; sourceTree = SOURCE_ROOT; };
+		A14D685F2174FBF80074CB60 /* GDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GDButton.swift; path = IOSDEV/Costom/GDButton.swift; sourceTree = SOURCE_ROOT; };
 		A14D6863217509150074CB60 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		A14D9A7A2172769900B39DB4 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		A14D9A7B2172783900B39DB4 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
-		A14DFE6A216FAC5E006E752F /* GDLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GDLabel.swift; path = IOSDEV/GDLabel.swift; sourceTree = SOURCE_ROOT; };
-		A189C2DE21823B4B00621D79 /* GDHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDHeaderView.swift; sourceTree = SOURCE_ROOT; };
+		A14DFE6A216FAC5E006E752F /* GDLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GDLabel.swift; path = IOSDEV/Costom/GDLabel.swift; sourceTree = SOURCE_ROOT; };
+		A189C2DE21823B4B00621D79 /* GDHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GDHeaderView.swift; path = IOSDEV/Costom/GDHeaderView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,12 +66,11 @@
 		A1209E22216B94EC00A80B83 /* IOSDEV */ = {
 			isa = PBXGroup;
 			children = (
-				A14D9A792172750F00B39DB4 /* fonts */,
-				A14DFE69216FABBD006E752F /* Controls */,
-				A14C0856216D14C0001A7990 /* extension */,
 				A1209E23216B94ED00A80B83 /* AppDelegate.swift */,
-				A1209E25216B94ED00A80B83 /* WelcomeController.swift */,
-				A14D6863217509150074CB60 /* ListController.swift */,
+				A1CCB5C12182420D00A71079 /* Costom */,
+				A14D9A792172750F00B39DB4 /* fonts */,
+				A14C0856216D14C0001A7990 /* extension */,
+				A1CCB5C22182426400A71079 /* Controller */,
 				A1209E2A216B94ED00A80B83 /* Assets.xcassets */,
 				A1209E2C216B94ED00A80B83 /* LaunchScreen.storyboard */,
 				A1209E2F216B94ED00A80B83 /* Info.plist */,
@@ -97,7 +96,7 @@
 			path = IOSDEV/fonts;
 			sourceTree = SOURCE_ROOT;
 		};
-		A14DFE69216FABBD006E752F /* Controls */ = {
+		A1CCB5C12182420D00A71079 /* Costom */ = {
 			isa = PBXGroup;
 			children = (
 				A14C0852216D0BB2001A7990 /* GDGradient.swift */,
@@ -105,8 +104,16 @@
 				A14D685F2174FBF80074CB60 /* GDButton.swift */,
 				A189C2DE21823B4B00621D79 /* GDHeaderView.swift */,
 			);
-			name = Controls;
-			path = "New Group";
+			path = Costom;
+			sourceTree = "<group>";
+		};
+		A1CCB5C22182426400A71079 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A1209E25216B94ED00A80B83 /* WelcomeController.swift */,
+				A14D6863217509150074CB60 /* ListController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
