@@ -46,6 +46,10 @@ class GDHeaderView: UIView {
         return subtitle
     }()
     
+    
+    let addButton = GDButton(title: "+", type: .squareIcon)
+    
+    
     func setupView(){
         addSubview(bg)
         bg.topAnchor.constraint(equalTo: topAnchor).isActive = true
@@ -55,14 +59,24 @@ class GDHeaderView: UIView {
         
         bg.addSubview(titleLabel)
         bg.addSubview(subTitleLable)
+        bg.addSubview(addButton)
         
+        // title
         titleLabel.centerYAnchor.constraint(equalTo: bg.centerYAnchor).isActive = true
         titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 20+8).isActive = true
         titleLabel.rightAnchor.constraint(equalTo: centerXAnchor).isActive = true
         
+        // subtitle
         subTitleLable.topAnchor.constraint(equalTo: titleLabel.bottomAnchor).isActive = true
         subTitleLable.leftAnchor.constraint(equalTo: leftAnchor, constant: 20+8).isActive = true
         subTitleLable.rightAnchor.constraint(equalTo: centerXAnchor, constant: 40).isActive = true
+        
+        //right icon
+        addButton.bottomAnchor.constraint(equalTo: subTitleLable.bottomAnchor).isActive  = true
+        addButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -20 - 8).isActive = true
+        addButton.heightAnchor.constraint(equalToConstant: 24).isActive = true
+        addButton.widthAnchor.constraint(equalTo: addButton.heightAnchor, multiplier: 1).isActive = true
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
