@@ -12,13 +12,23 @@ class GDButton: UIButton {
     
     var title:String!
     
-    init(title: String = "Button", frame:CGRect = .zero) {
+    init(title: String = "Button", frame:CGRect = .zero, type:ButtonOption = .roundedText) {
         super.init(frame: frame)
         if frame == .zero {
             self.translatesAutoresizingMaskIntoConstraints = false
         }
-        self.title = title
-        phaseTwo()
+        
+        
+        switch type {
+        case .roundedText:
+            self.title = title
+            phaseTwo()
+            break
+        case .squareIcon:
+            break
+        default:
+            break
+        }
     }
     
     

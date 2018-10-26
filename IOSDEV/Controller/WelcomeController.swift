@@ -31,7 +31,7 @@ class WelcomeController: UIViewController {
         return copyright
     }()
     
-    let startButton = GDButton(title: "START WINDOW")
+    let startButton = GDButton(title: "START WINDOW", type: .roundedText)
     
     @objc func nextStartButton(){
         UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
