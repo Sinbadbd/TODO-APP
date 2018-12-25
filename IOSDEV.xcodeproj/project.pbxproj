@@ -16,7 +16,10 @@
 		A14D68602174FBF80074CB60 /* GDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14D685F2174FBF80074CB60 /* GDButton.swift */; };
 		A14D6864217509150074CB60 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14D6863217509150074CB60 /* ListController.swift */; };
 		A14DFE6B216FAC5E006E752F /* GDLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14DFE6A216FAC5E006E752F /* GDLabel.swift */; };
+		A157B31821831F2F00ACAB40 /* optionset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A157B31721831F2F00ACAB40 /* optionset.swift */; };
+		A16368C821D1FC0300EB6149 /* GDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16368C721D1FC0300EB6149 /* GDTextField.swift */; };
 		A189C2DF21823B4B00621D79 /* GDHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189C2DE21823B4B00621D79 /* GDHeaderView.swift */; };
+		A1BD432921D13EFF00E241C9 /* NewItemPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BD432821D13EFF00E241C9 /* NewItemPopup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +36,10 @@
 		A14D9A7A2172769900B39DB4 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		A14D9A7B2172783900B39DB4 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		A14DFE6A216FAC5E006E752F /* GDLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GDLabel.swift; path = IOSDEV/Costom/GDLabel.swift; sourceTree = SOURCE_ROOT; };
+		A157B31721831F2F00ACAB40 /* optionset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = optionset.swift; sourceTree = "<group>"; };
+		A16368C721D1FC0300EB6149 /* GDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDTextField.swift; sourceTree = "<group>"; };
 		A189C2DE21823B4B00621D79 /* GDHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GDHeaderView.swift; path = IOSDEV/Costom/GDHeaderView.swift; sourceTree = SOURCE_ROOT; };
+		A1BD432821D13EFF00E241C9 /* NewItemPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemPopup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				A14C0854216D14AC001A7990 /* extension.swift */,
+				A157B31721831F2F00ACAB40 /* optionset.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -103,6 +110,8 @@
 				A14DFE6A216FAC5E006E752F /* GDLabel.swift */,
 				A14D685F2174FBF80074CB60 /* GDButton.swift */,
 				A189C2DE21823B4B00621D79 /* GDHeaderView.swift */,
+				A1BD432821D13EFF00E241C9 /* NewItemPopup.swift */,
+				A16368C721D1FC0300EB6149 /* GDTextField.swift */,
 			);
 			path = Costom;
 			sourceTree = "<group>";
@@ -186,12 +195,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A16368C821D1FC0300EB6149 /* GDTextField.swift in Sources */,
+				A1BD432921D13EFF00E241C9 /* NewItemPopup.swift in Sources */,
 				A1209E26216B94ED00A80B83 /* WelcomeController.swift in Sources */,
 				A14C0853216D0BB2001A7990 /* GDGradient.swift in Sources */,
 				A1209E24216B94ED00A80B83 /* AppDelegate.swift in Sources */,
 				A14C0855216D14AC001A7990 /* extension.swift in Sources */,
 				A189C2DF21823B4B00621D79 /* GDHeaderView.swift in Sources */,
 				A14D68602174FBF80074CB60 /* GDButton.swift in Sources */,
+				A157B31821831F2F00ACAB40 /* optionset.swift in Sources */,
 				A14DFE6B216FAC5E006E752F /* GDLabel.swift in Sources */,
 				A14D6864217509150074CB60 /* ListController.swift in Sources */,
 			);

@@ -28,3 +28,11 @@ extension UIColor {
     static var grayZero : UIColor {return UIColor.init(rgb: 0x9B9B9B)}
     static var grayOne : UIColor {return UIColor.init(rgb: 0x424242)}
 }
+
+extension UIView {
+    func checkIfAoutoLayout(){
+        if frame == .zero {
+            translatesAutoresizingMaskIntoConstraints = false
+        }
+    }
+}

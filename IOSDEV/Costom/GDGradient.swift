@@ -28,10 +28,12 @@ class GDGradient:UIView {
         UIColor.blueOne.cgColor
     ]
     
-    override init(frame: CGRect) {
+    override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         
-        
+        if frame == .zero {
+            translatesAutoresizingMaskIntoConstraints = false
+        }
         if let layer = self.layer as? CAGradientLayer {
             
             self.translatesAutoresizingMaskIntoConstraints = false
@@ -39,13 +41,11 @@ class GDGradient:UIView {
             layer.locations = [0.0,1.2]
         }
         
-        
     }
     
     override class var layerClass : AnyClass {
         return CAGradientLayer.self
     }
-    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -12,15 +12,16 @@ class GDButton: UIButton {
     
     var title:String!
     var type:ButtonOption!
+    var radius:CGFloat!
     
-    
-    init(title: String = "Button", frame:CGRect = .zero, type:ButtonOption = .roundedText) {
+    init(title: String = "Button", frame:CGRect = .zero, type:ButtonOption = .roundedText, radius:CGFloat = 20) {
         super.init(frame: frame)
         if frame == .zero {
             self.translatesAutoresizingMaskIntoConstraints = false
         }
         self.title = title
         self.type = type
+        self.radius = radius
         self.phaseTwo()
         
         
@@ -37,7 +38,7 @@ class GDButton: UIButton {
     
     
     func roundedText(){
-        self.layer.cornerRadius = 18
+        self.layer.cornerRadius = self.radius
     }
     func squareIcon(){
         if let titeleLabel = self.titleLabel {
