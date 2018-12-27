@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IOSDEV/Controller/ListController.swift"
+            timestampString = "567627345.671769"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "ListController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "variable initialization expression of IOSDEV.ListController.editField : IOSDEV.GDTextField"
+                  moduleName = "IOSDEV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sinbad/Desktop/IOS%20DEV/todoapp/IOSDEV/Controller/ListController.swift"
+                  timestampString = "567627345.997497"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IOSDEV.ListController.editField.getter : IOSDEV.GDTextField"
+                  moduleName = "IOSDEV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sinbad/Desktop/IOS%20DEV/todoapp/IOSDEV/Controller/ListController.swift"
+                  timestampString = "567627345.9992599"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IOSDEV.ListController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.Bundle&gt;) -&gt; IOSDEV.ListController"
+                  moduleName = "IOSDEV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sinbad/Desktop/IOS%20DEV/todoapp/IOSDEV/Controller/ListController.swift"
+                  timestampString = "567627346.0008889"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "273">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IOSDEV.ListController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;IOSDEV.ListController&gt;"
+                  moduleName = "IOSDEV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sinbad/Desktop/IOS%20DEV/todoapp/IOSDEV/Controller/ListController.swift"
+                  timestampString = "567627346.025488"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "197">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

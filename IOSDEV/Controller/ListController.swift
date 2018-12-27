@@ -13,6 +13,25 @@ class ListController: UIViewController {
     let popUp = NewItemPopup()
     let editField = GDTextField()
     
+    var keybordHeight:CGFloat = 0
+    
+    // keyboard handle
+    override func viewDidAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
+    }
+    
+    
+    
+    @objc func keyboardWillShow(notification: Notification) {
+        let keyboardSize = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.size
+        self.keybordHeight = keyboardSize.height
+        
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.85, initialSpringVelocity: 2, options: .curveEaseIn, animations: {
+            self.popUp.transform = CGAffineTransform(translationX: 0, y: -self.keybordHeight)
+        }, completion: nil)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
