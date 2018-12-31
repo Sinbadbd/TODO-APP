@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOSDEV/Controller/ListController.swift"
-            timestampString = "567627345.671769"
+            timestampString = "567953377.815255"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "ListController"
             landmarkType = "3">
             <Locations>
@@ -22,30 +22,30 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "variable initialization expression of IOSDEV.ListController.editField : IOSDEV.GDTextField"
+                  symbolName = "variable initialization expression of IOSDEV.ListController.popUp : IOSDEV.NewItemPopup"
                   moduleName = "IOSDEV"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sinbad/Desktop/IOS%20DEV/todoapp/IOSDEV/Controller/ListController.swift"
-                  timestampString = "567627345.997497"
+                  timestampString = "567953378.164923"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
                   offsetFromSymbolStart = "4">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "IOSDEV.ListController.editField.getter : IOSDEV.GDTextField"
+                  symbolName = "IOSDEV.ListController.popUp.getter : IOSDEV.NewItemPopup"
                   moduleName = "IOSDEV"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sinbad/Desktop/IOS%20DEV/todoapp/IOSDEV/Controller/ListController.swift"
-                  timestampString = "567627345.9992599"
+                  timestampString = "567953378.170204"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
                   offsetFromSymbolStart = "36">
                </Location>
                <Location
@@ -56,12 +56,12 @@
                   moduleName = "IOSDEV"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sinbad/Desktop/IOS%20DEV/todoapp/IOSDEV/Controller/ListController.swift"
-                  timestampString = "567627346.0008889"
+                  timestampString = "567953378.196215"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "273">
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "245">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -71,12 +71,12 @@
                   moduleName = "IOSDEV"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sinbad/Desktop/IOS%20DEV/todoapp/IOSDEV/Controller/ListController.swift"
-                  timestampString = "567627346.025488"
+                  timestampString = "567953378.206035"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "197">
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "169">
                </Location>
             </Locations>
          </BreakpointContent>

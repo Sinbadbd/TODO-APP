@@ -10,9 +10,12 @@ import UIKit
 
 class NewItemPopup:GDGradient {
     
-     let cancle = GDButton(title: " Cancle ", type: .roundedText, radius: 8)
-     let addBtn = GDButton(title: " Add ",type: .roundedText, radius: 8)
+    let cancle = GDButton(title: " Cancle ", type: .roundedText, radius: 8)
+    let addBtn = GDButton(title: " Add ",type: .roundedText, radius: 8)
     let editText = GDTextField( placeholder: "Enter Something", inset:6)
+    
+    var delegate:NewItemPopupDelegate?
+    
     
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
@@ -29,7 +32,7 @@ class NewItemPopup:GDGradient {
         // cancle.addTarget(self, action: #selector(setter: self.cancle), for: .touchUpInside)
         
         cancle.addTarget(self, action: #selector(self.handleCancle), for: .touchUpInside)
-        cancle.addTarget(self, action: #selector(self.handleAdd), for: .touchUpInside)
+        addBtn.addTarget(self, action: #selector(self.handleAdd), for: .touchUpInside)
         
         
         // add button
@@ -48,11 +51,15 @@ class NewItemPopup:GDGradient {
     // cancle
     
     @objc func handleCancle(){
-        
+        print("trying to cancle")
     }
     
     @objc func handleAdd(){
+        print("trying to add")
         
+        if let delegate = self.delegate {
+            delegate.addItemToList()
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

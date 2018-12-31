@@ -7,13 +7,22 @@
 //
 
 import UIKit
-class ListController: UIViewController {
+class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegate{
+    
+    
+    func addItemToList() {
+        
+    }
+    
+    func openAddItenPopup() {
+        print("trying to add item to the list")
+    }
+    
     
     let header = GDHeaderView( title: "Stuff to get done", subtitle: "10 LEFT")
     let popUp = NewItemPopup()
-    let editField = GDTextField()
     
-    var keybordHeight:CGFloat = 0
+    var keybordHeight:CGFloat = 280
     
     // keyboard handle
     override func viewDidAppear(_ animated: Bool) {
@@ -25,10 +34,6 @@ class ListController: UIViewController {
     @objc func keyboardWillShow(notification: Notification) {
         let keyboardSize = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.size
         self.keybordHeight = keyboardSize.height
-        
-        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.85, initialSpringVelocity: 2, options: .curveEaseIn, animations: {
-            self.popUp.transform = CGAffineTransform(translationX: 0, y: -self.keybordHeight)
-        }, completion: nil)
     }
     
     
@@ -54,11 +59,28 @@ class ListController: UIViewController {
         popUp.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         popUp.heightAnchor.constraint(equalToConstant: 80).isActive = true
         
+        
+        popUp.editText.delegate = self
+        popUp.delegate = self
         // edit text field
         //view.addSubview(editField)
         
         
-      //  header.delegate = self
+       header.delegate = self
         
     }
 }
+
+
+extension ListController:UITextFieldDelegate{
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.85, initialSpringVelocity: 2, options: .curveEaseIn, animations: {
+            self.popUp.transform = CGAffineTransform(translationX: 0, y: -self.keybordHeight)
+        }, completion: nil)
+    }
+}
+
+
+
+
+

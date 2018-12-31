@@ -11,7 +11,9 @@ import UIKit
 class GDHeaderView: UIView {
     
     let bg = GDGradient()
+    let addButton = GDButton(title: "+", type: .squareIcon)
     
+    var delegate:GDHeaderDeletegate?
     //let titleLabel = GDLabel(size: 24 )
     //let subTitleLabel = GDLabel(size: 24)
     
@@ -47,9 +49,6 @@ class GDHeaderView: UIView {
     }()
     
     
-    let addButton = GDButton(title: "+", type: .squareIcon)
-    
-    
     func setupView(){
         addSubview(bg)
         bg.topAnchor.constraint(equalTo: topAnchor).isActive = true
@@ -77,6 +76,12 @@ class GDHeaderView: UIView {
         addButton.heightAnchor.constraint(equalToConstant: 24).isActive = true
         addButton.widthAnchor.constraint(equalTo: addButton.heightAnchor, multiplier: 1).isActive = true
         
+    }
+    
+    @objc func handleAddButon(){
+        if let delegate = self.delegate {
+            delegate.openAddItenPopup()
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
