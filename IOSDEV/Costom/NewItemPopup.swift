@@ -51,7 +51,8 @@ class NewItemPopup:GDGradient {
     // cancle
     
     @objc func handleCancle(){
-        print("trying to cancle")
+        ///print("trying to cancle")
+        editText.resignFirstResponder()
     }
     
     @objc func handleAdd(){

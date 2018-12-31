@@ -68,15 +68,18 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
         
        header.delegate = self
         
+        
     }
 }
 
 
 extension ListController:UITextFieldDelegate{
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.85, initialSpringVelocity: 2, options: .curveEaseIn, animations: {
-            self.popUp.transform = CGAffineTransform(translationX: 0, y: -self.keybordHeight)
-        }, completion: nil)
+        popUp.animateView(transform: CGAffineTransform(translationX: 0, y: -keybordHeight), duration: 0.40)
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        popUp.animateView(transform: CGAffineTransform(translationX: 0, y: 0), duration: 0.60)
     }
 }
 
