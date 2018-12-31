@@ -12,6 +12,8 @@ class GDTableView: UITableView {
     
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
+        
+        checkIfAoutoLayout()
     }
     
     required init?(coder aDecoder: NSCoder) {

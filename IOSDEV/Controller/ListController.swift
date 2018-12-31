@@ -31,13 +31,13 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
         return view
     }()
     
+    let listTable = GDTableView()
     
     
     // keyboard handle
     override func viewDidAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
     }
-    
     
     
     @objc func keyboardWillShow(notification: Notification) {
@@ -50,15 +50,6 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        
-        view.addSubview(bg)
-        bg.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
-        bg.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50).isActive = true
-        bg.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100).isActive = true
-        bg.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
-        
-        
-        
         view.addSubview(header)
         //popUp.backgroundColor = UIColor.red
         
@@ -67,6 +58,20 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
         header.heightAnchor.constraint(equalToConstant: 120).isActive = true
         header.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         header.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        
+        // main table view background
+        view.addSubview(bg)
+        bg.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
+        bg.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 20).isActive = true
+        bg.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100).isActive = true
+        bg.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
+        
+        
+        view.addSubview(listTable)
+        listTable.leftAnchor.constraint(equalTo: bg.leftAnchor, constant: 8).isActive = true
+        listTable.topAnchor.constraint(equalTo: bg.topAnchor, constant: 8).isActive = true
+        listTable.bottomAnchor.constraint(equalTo: bg.bottomAnchor, constant: -8).isActive = true
+        listTable.rightAnchor.constraint(equalTo: bg.rightAnchor, constant: -8).isActive = true
         
         // popup constraint
         
