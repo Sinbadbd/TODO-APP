@@ -13,5 +13,5 @@ protocol GDHeaderDeletegate {
 }
 
 protocol NewItemPopupDelegate {
-    func addItemToList()
+    func addItemToList(text:String)
 }

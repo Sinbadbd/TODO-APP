@@ -57,8 +57,8 @@ class NewItemPopup:GDGradient {
     @objc func handleAdd(){
         print("trying to add")
         
-        if let delegate = self.delegate {
-            delegate.addItemToList()
+        if let delegate = self.delegate, let editText = self.editText.text {
+            delegate.addItemToList(text: editText)
         }
     }
     

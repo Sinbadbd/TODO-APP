@@ -10,8 +10,8 @@ import UIKit
 class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegate{
     
     
-    func addItemToList() {
-        
+    func addItemToList(text:String) {
+         print("add item to text\(text)")
     }
     
     func openAddItenPopup() {
