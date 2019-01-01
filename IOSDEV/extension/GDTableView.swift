@@ -14,6 +14,8 @@ class GDTableView: UITableView {
         super.init(frame: frame, style: style)
         
         checkIfAoutoLayout()
+        backgroundColor = .clear
+        separatorStyle = .none
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -34,6 +34,8 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
     let listTable = GDTableView()
     let CELL_ID = "cell_id"
     
+    var listData = ["Happy", "Lost", "Give"]
+    
     // keyboard handle
     override func viewDidAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
@@ -88,12 +90,11 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
         //view.addSubview(editField)
         
         
-       header.delegate = self
+        header.delegate = self
         
         listTable.delegate = self
         listTable.dataSource = self
         listTable.register(UITableViewCell.self, forCellReuseIdentifier: CELL_ID)
-        
     }
 }
 
@@ -112,12 +113,15 @@ extension ListController:UITextFieldDelegate{
 extension ListController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return self.listData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath)
-        cell.textLabel?.text = "This is text"
+        cell.textLabel?.text = self.listData[indexPath.row]
+        cell.selectionStyle = .none
+        cell.backgroundColor = .white
+        cell.textLabel?.textColor = .gray
         return cell
     }
     
