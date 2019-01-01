@@ -34,7 +34,7 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
     let listTable = GDTableView()
     let CELL_ID = "cell_id"
     
-    var listData = ["Happy", "Lost", "Give"]
+    var listData = ["Hey", "Hello", "Bonjour", "Welcome", "Hi", "Hola"]
     
     // keyboard handle
     override func viewDidAppear(_ animated: Bool) {
@@ -94,7 +94,7 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
         
         listTable.delegate = self
         listTable.dataSource = self
-        listTable.register(UITableViewCell.self, forCellReuseIdentifier: CELL_ID)
+        listTable.register(GDTableCell.self, forCellReuseIdentifier: CELL_ID)
     }
 }
 
@@ -117,11 +117,9 @@ extension ListController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath) as! GDTableCell
         cell.textLabel?.text = self.listData[indexPath.row]
-        cell.selectionStyle = .none
-        cell.backgroundColor = .white
-        cell.textLabel?.textColor = .gray
+        
         return cell
     }
     
