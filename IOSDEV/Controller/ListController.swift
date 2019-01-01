@@ -32,7 +32,7 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
     }()
     
     let listTable = GDTableView()
-    
+    let CELL_ID = "cell_id"
     
     // keyboard handle
     override func viewDidAppear(_ animated: Bool) {
@@ -90,6 +90,9 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
         
        header.delegate = self
         
+        listTable.delegate = self
+        listTable.dataSource = self
+        listTable.register(UITableViewCell.self, forCellReuseIdentifier: CELL_ID)
         
     }
 }
@@ -106,6 +109,18 @@ extension ListController:UITextFieldDelegate{
 }
 
 
-
-
+extension ListController : UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath)
+        cell.textLabel?.text = "This is text"
+        return cell
+    }
+    
+    
+}
 
