@@ -37,7 +37,7 @@ class GDTableCell : UITableViewCell {
         didSet {
             if let toDo = toDo {
                 self.titleLabel.text = toDo.title
-                
+                self.box.toggled = toDo.status
             }
         }
     }

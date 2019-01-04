@@ -56,9 +56,9 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
         
         
         listData = [
-            Todo(id:1, title: "this is test 1", status: false),
-            Todo(id:2, title: "this is test 2", status: false),
-            Todo(id:3, title: "this is test 3", status: false)
+            Todo(id:1, title: "this is test 1", status: true),
+            Todo(id:2, title: "this is test 2", status: true),
+            Todo(id:3, title: "this is test 3", status: true)
         ]
         
         
