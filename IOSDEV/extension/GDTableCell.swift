@@ -20,6 +20,11 @@ class GDTableCell : UITableViewCell {
     
     let titleLabel = GDTextField( placeholder: "Todo", radius: 4, inset: 14)
     
+    
+    let box = GDCheckbox()
+    
+    
+    
     let view: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -58,7 +63,11 @@ class GDTableCell : UITableViewCell {
         titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -4).isActive = true
         titleLabel.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         
-        
+        addSubview(box)
+        box.rightAnchor.constraint(equalTo: titleLabel.rightAnchor, constant: -10).isActive = true
+        box.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        box.widthAnchor.constraint(equalToConstant: 18).isActive = true
+        box.heightAnchor.constraint(equalToConstant: 18).isActive = true
     }
     
     
