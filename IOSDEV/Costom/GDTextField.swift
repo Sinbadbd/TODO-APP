@@ -11,7 +11,7 @@ class GDTextField: UITextField {
     
     var insets:UIEdgeInsets!
     
-    init(frame: CGRect = .zero, placeholder:String = "placeholder", radius:CGFloat = 4, inset:CGFloat = 4) {
+    init(frame: CGRect = .zero, placeholder:String = "placeholder", radius:CGFloat = 4, inset:CGFloat = 8) {
         super.init(frame: frame)
         checkIfAoutoLayout()
         
@@ -22,6 +22,7 @@ class GDTextField: UITextField {
         self.textColor = UIColor.gray
     }
     
+    // text margin left
     override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
         return UIEdgeInsetsInsetRect(bounds, self.insets)
     }

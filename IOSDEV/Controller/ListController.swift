@@ -34,7 +34,9 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
     let listTable = GDTableView()
     let CELL_ID = "cell_id"
     
-    var listData = ["Hey", "Hello", "Bonjour", "Welcome", "Hi", "Hola"]
+    var listData:[Todo] = [Todo]()
+    
+   // var listItem = [Todo]()
     
     // keyboard handle
     override func viewDidAppear(_ animated: Bool) {
@@ -51,6 +53,14 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        
+        
+        listData = [
+            Todo(id:1, title: "this is test 1", status: false),
+            Todo(id:2, title: "this is test 2", status: false),
+            Todo(id:3, title: "this is test 3", status: false)
+        ]
+        
         
         view.addSubview(header)
         //popUp.backgroundColor = UIColor.red
@@ -118,11 +128,14 @@ extension ListController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath) as! GDTableCell
-        cell.textLabel?.text = self.listData[indexPath.row]
+        //cell.textLabel?.text = self.listData[indexPath.row].title
         
+        cell.toDo = self.listData[indexPath.row]
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 40
+    }
 }
 
