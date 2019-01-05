@@ -9,14 +9,15 @@
 import UIKit
 class GDTableCell : UITableViewCell {
     
-    //    let titleLabel : UILabel = {
-    //        let title = UILabel()
-    //        title.textColor = .grayZero
-    //        title.font = UIFont(name: "OpenSans-Regular.ttf", size: 14)
-    //        title.translatesAutoresizingMaskIntoConstraints = false
-    //
-    //        return title
-    //    }()
+    var delegate: GDListCellDelegate?
+    @objc func toggleStatus(){
+        
+        if let delegate  = self.delegate, let toDo = self.toDo {
+            let newToDo = Todo(id: toDo.id, title: titleLabel.text!, status: !toDo.status)
+            delegate.toggleToDo(toDo: newToDo)
+        }
+    }
+    
     
     let titleLabel = GDTextField( placeholder: "Todo", radius: 4, inset: 14)
     
@@ -41,6 +42,11 @@ class GDTableCell : UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        box.addTarget(self, action: #selector(toggleStatus), for: .touchUpInside)
+        
+        
+        
         selectionStyle = .none
         backgroundColor = .clear
         textLabel?.textColor = .gray
