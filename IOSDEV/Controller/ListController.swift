@@ -57,7 +57,7 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
         
         listData = [
             Todo(id:1, title: "this is test 1", status: true),
-            Todo(id:2, title: "this is test 2", status: true),
+            Todo(id:2, title: "this is test 2", status: false),
             Todo(id:3, title: "this is test 3", status: true)
         ]
         
@@ -95,7 +95,7 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
         
         
         popUp.editText.delegate = self
-        popUp.delegate = self 
+        popUp.delegate = self
         
         header.delegate = self
         
@@ -144,12 +144,31 @@ extension ListController : UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.listData.count
+        var count = 0
+        
+        self.listData.forEach { (toDo) in
+            if section == 0 && !toDo.status {
+                count += 1
+            }else if section == 1 && toDo.status {
+                count += 1
+            }
+        }
+        
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath) as! GDTableCell
-        cell.toDo = self.listData[indexPath.row]
+        
+        var listDataTable:[Todo] = []
+        self.listData.forEach { (toDo) in
+            if indexPath.section == 0 && !toDo.status {
+                listDataTable.append(toDo)
+            }else if indexPath.section == 1 && toDo.status {
+                listDataTable.append(toDo)
+            }
+        }
+        cell.toDo = listDataTable[indexPath.row]
         return cell
     }
     
