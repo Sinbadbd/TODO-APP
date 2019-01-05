@@ -20,22 +20,18 @@ class GDTableCell : UITableViewCell {
     
     let titleLabel = GDTextField( placeholder: "Todo", radius: 4, inset: 14)
     
-    
     let box = GDCheckbox()
-    
-    
     
     let view: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
-    
-    
+     
     var toDo: Todo? {
         didSet {
             if let toDo = toDo {
+                self.box.id =  toDo.id
                 self.titleLabel.text = toDo.title
                 self.box.toggled = toDo.status
             }

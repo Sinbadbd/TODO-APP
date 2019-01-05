@@ -116,7 +116,22 @@ extension ListController:UITextFieldDelegate{
     }
 }
 
-extension ListController : UITableViewDelegate, UITableViewDataSource {
+extension ListController : UITableViewDelegate, UITableViewDataSource, GDListCellDelegate {
+    
+    func toggleToDo(id: Int,  status: Bool) {
+        let newListData = self.listData.map { (toDo) -> Todo in
+            
+            if toDo.id == id {
+              var newTodoList = toDo
+                newTodoList.status = status
+                return newTodoList
+            }
+            return toDo
+        }
+        self.listData = newListData
+        self.listTable.reloadData()
+    }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -160,6 +175,7 @@ extension ListController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath) as! GDTableCell
         
+        cell.box.delegate = self
         var listDataTable:[Todo] = []
         self.listData.forEach { (toDo) in
             if indexPath.section == 0 && !toDo.status {
