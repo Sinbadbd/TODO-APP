@@ -83,6 +83,9 @@ class GDHeaderView: UIView {
         addButton.heightAnchor.constraint(equalToConstant: 24).isActive = true
         addButton.widthAnchor.constraint(equalTo: addButton.heightAnchor, multiplier: 1).isActive = true
         
+        
+        addButton.addTarget(self, action: #selector(self.handleAddButon), for: .touchUpInside)
+        
     }
     
     @objc func handleAddButon(){

@@ -12,10 +12,19 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
     
     func addItemToList(text:String) {
         print("add item to text\(text)")
+        
     }
+    
+    var popUpLocation:CGFloat = 70
     
     func openAddItenPopup() {
         print("trying to add item to the list")
+        popUp.animateView(transform: CGAffineTransform(translationX: 0, y: popUpLocation), duration: 0.40)
+        if popUpLocation == 70 {
+            popUpLocation = 0
+        } else {
+            popUpLocation = 70
+        }
     }
     
     
@@ -101,7 +110,7 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
         popUp.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
         popUp.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         popUp.heightAnchor.constraint(equalToConstant: 80).isActive = true
-        
+        openAddItenPopup()
         
         popUp.editText.delegate = self
         popUp.delegate = self
@@ -131,7 +140,7 @@ extension ListController : UITableViewDelegate, UITableViewDataSource, GDListCel
     func toggleToDo(toDo updatedToDo : Todo) {
         let newListData = self.listData.map { (oldToDo) -> Todo in
             if oldToDo.id == updatedToDo.id {
-              var newTodo = oldToDo
+                var newTodo = oldToDo
                 newTodo.status = updatedToDo.status
                 newTodo.title = updatedToDo.title
                 return newTodo
