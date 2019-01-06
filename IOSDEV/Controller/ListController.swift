@@ -15,16 +15,8 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
         
     }
     
-    var popUpLocation:CGFloat = 70
-    
     func openAddItenPopup() {
-        print("trying to add item to the list")
-        popUp.animateView(transform: CGAffineTransform(translationX: 0, y: popUpLocation), duration: 0.40)
-        if popUpLocation == 70 {
-            popUpLocation = 0
-        } else {
-            popUpLocation = 70
-        }
+        popUp.animationPopUp()
     }
     
     

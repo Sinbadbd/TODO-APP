@@ -17,11 +17,26 @@ class NewItemPopup:GDGradient {
     var delegate:NewItemPopupDelegate?
     
     
+    var popUpLocation:CGFloat = 70
+    
+    @objc func animationPopUp(){
+        print("trying to add item to the list")
+        self.animateView(transform: CGAffineTransform(translationX: 0, y: popUpLocation), duration: 0.40)
+        if popUpLocation == 70 {
+            popUpLocation = 0
+        } else {
+            popUpLocation = 70
+        }
+    }
+    
+    
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         self.layer.cornerRadius = 14
         let inset:CGFloat = 12
         //cancle.backgroundColor = UIColor.red
+        
+        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.animationPopUp)))
         
         addSubview(cancle)
         cancle.leftAnchor.constraint(equalTo: leftAnchor, constant: inset).isActive = true
@@ -53,6 +68,7 @@ class NewItemPopup:GDGradient {
     @objc func handleCancle(){
         ///print("trying to cancle")
         editText.resignFirstResponder()
+        animationPopUp()
     }
     
     @objc func handleAdd(){
