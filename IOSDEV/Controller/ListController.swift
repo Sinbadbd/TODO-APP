@@ -49,11 +49,20 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
         self.keybordHeight = keyboardSize.height
     }
     
+    func updateHeaderItem () {
+        header.itemsLeft = 0
+        self.listData.forEach { (toDo) in
+            if !toDo.status {
+                header.itemsLeft += 1
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         
+        self.updateHeaderItem()
         
         listData = [
             Todo(id:1, title: "this is test 1", status: true),
@@ -102,6 +111,7 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
         listTable.delegate = self
         listTable.dataSource = self
         listTable.register(GDTableCell.self, forCellReuseIdentifier: CELL_ID)
+        
     }
 }
 
@@ -130,6 +140,7 @@ extension ListController : UITableViewDelegate, UITableViewDataSource, GDListCel
         }
         self.listData = newListData
         self.listTable.reloadData()
+        self.updateHeaderItem()
     }
     
     
