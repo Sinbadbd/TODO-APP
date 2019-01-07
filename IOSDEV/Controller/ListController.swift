@@ -63,6 +63,8 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
     
     var listData:[Todo] = [Todo]()
     
+    var bgBottom:NSLayoutConstraint!
+    
     // var listItem = [Todo]()
     
     // keyboard handle
@@ -111,7 +113,8 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
         view.addSubview(bg)
         bg.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
         bg.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 20).isActive = true
-        bg.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100).isActive = true
+        bgBottom = bg.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100)
+        bgBottom.isActive = true
         bg.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         
         
@@ -146,9 +149,20 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
 extension ListController:UITextFieldDelegate{
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.bgBottom.constant = -keybordHeight - 100
+        
+        UIView.animate(withDuration: 0) {
+            self.view.layoutIfNeeded()
+        }
+        
         popUp.animateView(transform: CGAffineTransform(translationX: 0, y: -keybordHeight), duration: 0.40)
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
+        self.bgBottom.constant = -100
+        
+        UIView.animate(withDuration: 0) {
+            self.view.layoutIfNeeded()
+        }
         popUp.animateView(transform: CGAffineTransform(translationX: 0, y: 0), duration: 0.60)
     }
 }
