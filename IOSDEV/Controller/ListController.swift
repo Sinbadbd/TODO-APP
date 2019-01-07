@@ -9,10 +9,36 @@
 import UIKit
 class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegate{
     
+    func notList(text: String) -> Bool {
+        var isNotInList = true
+        
+        self.listData.forEach { (toDo) in
+            if toDo.title == text {
+                isNotInList = false
+            }
+        }
+        return isNotInList
+    }
+    
+    
     
     func addItemToList(text:String) {
-        print("add item to text\(text)")
         
+        if notList(text: text) {
+            let newItem = Todo(id: self.listData.count, title: text, status: false)
+            
+            self.listData.append(newItem)
+            self.listTable.reloadData()
+            self.updateHeaderItem()
+            self.popUp.editText.text = ""
+            self.popUp.animationPopUp()
+        }else {
+            let alertController = UIAlertController(title: text, message: "\(text) is Exits!", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+//            self.popUp.editText.text = ""
+//            self.popUp.animationPopUp()
+        }
     }
     
     func openAddItenPopup() {

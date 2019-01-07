@@ -20,7 +20,7 @@ class NewItemPopup:GDGradient {
     var popUpLocation:CGFloat = 70
     
     @objc func animationPopUp(){
-        print("trying to add item to the list")
+       editText.resignFirstResponder()
         self.animateView(transform: CGAffineTransform(translationX: 0, y: popUpLocation), duration: 0.40)
         if popUpLocation == 70 {
             popUpLocation = 0
