@@ -23,6 +23,8 @@
 		A174280221DBE97600576544 /* GDTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A174280121DBE97600576544 /* GDTableCell.swift */; };
 		A189C2DF21823B4B00621D79 /* GDHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189C2DE21823B4B00621D79 /* GDHeaderView.swift */; };
 		A1B1747621D5519E00A5539A /* protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B1747521D5519E00A5539A /* protocol.swift */; };
+		A1B3501B21E3CD7200E7698D /* Todo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1B3501921E3CD7200E7698D /* Todo.xcdatamodeld */; };
+		A1B3501D21E3CDF500E7698D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B3501C21E3CDF500E7698D /* CoreDataManager.swift */; };
 		A1BD432921D13EFF00E241C9 /* NewItemPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BD432821D13EFF00E241C9 /* NewItemPopup.swift */; };
 		A1E8CFF521DFC31800D2DC00 /* GDCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E8CFF421DFC31800D2DC00 /* GDCheckbox.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +50,8 @@
 		A174280121DBE97600576544 /* GDTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDTableCell.swift; sourceTree = "<group>"; };
 		A189C2DE21823B4B00621D79 /* GDHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GDHeaderView.swift; path = IOSDEV/Costom/GDHeaderView.swift; sourceTree = SOURCE_ROOT; };
 		A1B1747521D5519E00A5539A /* protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocol.swift; sourceTree = "<group>"; };
+		A1B3501A21E3CD7200E7698D /* Todo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Todo.xcdatamodel; sourceTree = "<group>"; };
+		A1B3501C21E3CDF500E7698D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		A1BD432821D13EFF00E241C9 /* NewItemPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemPopup.swift; sourceTree = "<group>"; };
 		A1E8CFF421DFC31800D2DC00 /* GDCheckbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDCheckbox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +70,7 @@
 		A1209E17216B94EB00A80B83 = {
 			isa = PBXGroup;
 			children = (
+				A1B3501921E3CD7200E7698D /* Todo.xcdatamodeld */,
 				A1209E22216B94EC00A80B83 /* IOSDEV */,
 				A1209E21216B94EC00A80B83 /* Products */,
 			);
@@ -91,6 +96,7 @@
 				A1209E2A216B94ED00A80B83 /* Assets.xcassets */,
 				A1209E2C216B94ED00A80B83 /* LaunchScreen.storyboard */,
 				A1209E2F216B94ED00A80B83 /* Info.plist */,
+				A1B3501C21E3CDF500E7698D /* CoreDataManager.swift */,
 			);
 			path = IOSDEV;
 			sourceTree = "<group>";
@@ -224,6 +230,8 @@
 				A1661A8B21DD453500FCA0C4 /* toDo.swift in Sources */,
 				A14C0853216D0BB2001A7990 /* GDGradient.swift in Sources */,
 				A1209E24216B94ED00A80B83 /* AppDelegate.swift in Sources */,
+				A1B3501D21E3CDF500E7698D /* CoreDataManager.swift in Sources */,
+				A1B3501B21E3CD7200E7698D /* Todo.xcdatamodeld in Sources */,
 				A14C0855216D14AC001A7990 /* extension.swift in Sources */,
 				A189C2DF21823B4B00621D79 /* GDHeaderView.swift in Sources */,
 				A174280221DBE97600576544 /* GDTableCell.swift in Sources */,
@@ -404,6 +412,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A1B3501921E3CD7200E7698D /* Todo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A1B3501A21E3CD7200E7698D /* Todo.xcdatamodel */,
+			);
+			currentVersion = A1B3501A21E3CD7200E7698D /* Todo.xcdatamodel */;
+			path = Todo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A1209E18216B94EB00A80B83 /* Project object */;
 }

@@ -93,11 +93,7 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
         
         self.updateHeaderItem()
         
-        listData = [
-            Todo(id:1, title: "this is test 1", status: true),
-            Todo(id:2, title: "this is test 2", status: false),
-            Todo(id:3, title: "this is test 3", status: true)
-        ]
+        listData = []
         
         
         view.addSubview(header)
@@ -147,6 +143,10 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
 
 
 extension ListController:UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         self.bgBottom.constant = -keybordHeight - 100
