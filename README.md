@@ -5,7 +5,7 @@
 - Main screen
 - Add/Remove task
 - Keyboard handle
-- coredata/realm database integration (IN PROGRESS)
+- Core Data/realm database integration (IN PROGRESS)
 
 ------------------------------------------------------------------------------------
 <img align="left" src="image/1.png" width="250px"/> 
