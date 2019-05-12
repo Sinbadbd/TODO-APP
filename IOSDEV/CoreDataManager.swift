@@ -11,13 +11,13 @@ import CoreData
 struct CoreDataManager {
     static let share = CoreDataManager()
     
-    let persistentContainer : NSPersistentContainer = {
-        container.loadPersistentStores { (storeDescription, err) in
-            if let err == err {
-                fatalError("loading of store failed: \(err)")
-            }
-            return container
-        }
-    }()
+//    let persistentContainer : NSPersistentContainer = {
+////        container.loadPersistentStores { (storeDescription, err) in
+////            if let err == err {
+////                fatalError("loading of store failed: \(err)")
+////            }
+////            return container
+////        }
+//    }()
     
 }

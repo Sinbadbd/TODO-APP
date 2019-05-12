@@ -27,7 +27,7 @@ class WelcomeController: UIViewController {
     }()
     
     let copyrightLabel:UILabel = {
-        let copyright = GDLabel(title: "© 2018 Copyright", color: .grayOne, size: 12, textAlign: .center)
+        let copyright = GDLabel(title: "© 2019 Copyright", color: .grayOne, size: 12, textAlign: .center)
         return copyright
     }()
     
@@ -66,7 +66,7 @@ class WelcomeController: UIViewController {
         
         bg.addSubview(titleLabel)
         titleLabel.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        titleLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        titleLabel.heightAnchor.constraint(equalToConstant: 100).isActive = true
         titleLabel.centerXAnchor.constraint(equalTo: bg.centerXAnchor).isActive = true
         titleLabel.topAnchor.constraint(equalTo: bg.topAnchor, constant: 60).isActive = true
         
