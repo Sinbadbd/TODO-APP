@@ -7,14 +7,20 @@
 //
 
 import UIKit
+import RealmSwift
+
 class GDTableCell : UITableViewCell {
     
     var delegate: GDListCellDelegate?
     @objc func toggleStatus(){
         
         if let delegate  = self.delegate, let toDo = self.toDo {
-            let newToDo = Todo(id: toDo.id, title: titleLabel.text!, status: !toDo.status)
-            delegate.toggleToDo(toDo: newToDo)
+           // let newToDo = Todo(id: toDo.id, title: titleLabel.text!, status: !toDo.status)
+            let data = Todo()
+            data.id = toDo.id
+            data.title = toDo.title
+            data.status = toDo.status
+            delegate.toggleToDo(toDo: data)
         }
     }
     
@@ -32,7 +38,7 @@ class GDTableCell : UITableViewCell {
     var toDo: Todo? {
         didSet {
             if let toDo = toDo {
-                self.box.id =  toDo.id
+                self.box.id =  Int(toDo.id)
                 self.titleLabel.text = toDo.title
                 self.box.toggled = toDo.status
             }

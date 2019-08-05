@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RealmSwift
+
 class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegate{
     
     func notList(text: String) -> Bool {
@@ -20,24 +22,42 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
         return isNotInList
     }
     
+    let realm = try! Realm()
     
-    
+    // let todoList = [Todo]
+    // Generate auto-increment id manually
+    private func incrementID() -> Int {
+        return (realm.objects(Todo.self).max(ofProperty: "id") as Int? ?? 0) + 1
+    }
     func addItemToList(text:String) {
         
         if notList(text: text) {
-            let newItem = Todo(id: self.listData.count, title: text, status: false)
+            let toDo = Todo()
+            try! realm.write {
+                
+                toDo.id = incrementID()
+                toDo.title = text
+                let saveData =  realm.add(toDo, update: true)
+                
+                print(Realm.Configuration.defaultConfiguration.fileURL!)
+                
+                print("save\(saveData)")
+            }
+            self.listData.append(toDo)
+            DispatchQueue.main.async {
+                
+                self.listTable.reloadData()
+                self.updateHeaderItem()
+                self.popUp.editText.text = ""
+                self.popUp.animationPopUp()
+            }
             
-            self.listData.append(newItem)
-            self.listTable.reloadData()
-            self.updateHeaderItem()
-            self.popUp.editText.text = ""
-            self.popUp.animationPopUp()
         }else {
             let alertController = UIAlertController(title: text, message: "\(text) is Exits!", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
             self.present(alertController, animated: true, completion: nil)
-//            self.popUp.editText.text = ""
-//            self.popUp.animationPopUp()
+            //            self.popUp.editText.text = ""
+            //            self.popUp.animationPopUp()
         }
     }
     
@@ -65,7 +85,7 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
     
     var bgBottom:NSLayoutConstraint!
     
-    // var listItem = [Todo]()
+    var listItem = [Todo]()
     
     // keyboard handle
     override func viewDidAppear(_ animated: Bool) {
@@ -86,14 +106,26 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
             }
         }
     }
-    
+    func fetchData(){
+        let realm = try! Realm()
+        listData = Array(realm.objects(Todo.self))
+        // var arr = [listData]
+        // listData.append(listItem)
+        // listData.append(listData)
+        print(listData)
+        //        for toDo in toDo {
+        //            print(todo.title)
+        //        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         
         self.updateHeaderItem()
-        
+        fetchData()
         listData = []
+        
+        //  RealmResults<toDo> result1 = query.findAll();
         
         
         view.addSubview(header)
@@ -137,6 +169,9 @@ class ListController: UIViewController , GDHeaderDeletegate, NewItemPopupDelegat
         listTable.delegate = self
         listTable.dataSource = self
         listTable.register(GDTableCell.self, forCellReuseIdentifier: CELL_ID)
+        
+        DispatchQueue.main.async {
+            self.listTable.reloadData()        }
         
     }
 }
@@ -221,7 +256,7 @@ extension ListController : UITableViewDelegate, UITableViewDataSource, GDListCel
             }
         }
         
-        return count
+        return listData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -229,6 +264,7 @@ extension ListController : UITableViewDelegate, UITableViewDataSource, GDListCel
         
         cell.delegate = self
         var listDataTable:[Todo] = []
+        
         self.listData.forEach { (toDo) in
             if indexPath.section == 0 && !toDo.status {
                 listDataTable.append(toDo)
@@ -236,7 +272,8 @@ extension ListController : UITableViewDelegate, UITableViewDataSource, GDListCel
                 listDataTable.append(toDo)
             }
         }
-        cell.toDo = listDataTable[indexPath.row]
+        
+        cell.toDo = listData[indexPath.row]
         return cell
     }
     
